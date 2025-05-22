@@ -1,12 +1,5 @@
-import { Produto as ProdutoType } from '../../App'
+import { PropsProduto as Props } from '../../types'
 import * as S from './styles'
-
-type Props = {
-  produto: ProdutoType
-  aoComprar: (produto: ProdutoType) => void
-  favoritar: (produto: ProdutoType) => void
-  estaNosFavoritos: boolean
-}
 
 export const paraReal = (valor: number) =>
   new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
