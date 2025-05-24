@@ -4,7 +4,7 @@ import * as S from './styles'
 
 import cesta from '../../assets/cesta.png'
 import { paraReal } from '../Produto'
-import { RootReducer } from '../../store'
+import { RootReducer } from '../../types'
 
 const Header = () => {
   const itens = useSelector((state: RootReducer) => state.carrinho.itens)

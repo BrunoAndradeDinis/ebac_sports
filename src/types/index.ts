@@ -1,9 +1,15 @@
+import { store } from '../store'
+
 export type CarrinhoItens = {
   itens: Produto[]
 }
 
 export type FavItens = {
   favs: Produto[]
+}
+
+export type ProdutosType = {
+  produto: Produto[]
 }
 
 export type Produto = {
@@ -13,21 +19,9 @@ export type Produto = {
   imagem: string
 }
 
-export type PropsHeader = {
-  itensNoCarrinho: Produto[]
-  favoritos: Produto[]
-}
-
 export type PropsProduto = {
   produto: Produto
-  aoComprar: (produto: Produto) => void
-  favoritar: (produto: Produto) => void
   estaNosFavoritos: boolean
 }
 
-export type PropsProdutos = {
-  produtos: Produto[]
-  favoritos: Produto[]
-  adicionarAoCarrinho: (produto: Produto) => void
-  favoritar: (produto: Produto) => void
-}
+export type RootReducer = ReturnType<typeof store.getState>
