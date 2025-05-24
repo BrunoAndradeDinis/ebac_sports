@@ -19,9 +19,4 @@ export type Produto = {
   imagem: string
 }
 
-export type PropsProduto = {
-  produto: Produto
-  estaNosFavoritos: boolean
-}
-
 export type RootReducer = ReturnType<typeof store.getState>
